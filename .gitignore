@@ -1,0 +1,13 @@
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+.DS_Store
+.dart_tool/
+
+.packages
+.pub/
+
+build/
