@@ -76,7 +76,7 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> initPlatformState() async {
     await Freshchat.init(
-        appID: "YOUR_APP_ID_HERE", appKey: "YOUR_APP_KEY_HERE");
+        appID: "248c97f4-1bf5-437b-a643-3755ee61ac43", appKey: "8b80e5df-2e04-42e1-b322-246e12fd12d9");
   }
 
   @override
