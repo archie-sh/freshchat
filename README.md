@@ -1,9 +1,11 @@
 # flutter_freshchat
-A Flutter plugin for integrating Freshchat in your mobile app. Supports android only atleast for now.
-
 A copy of https://github.com/fayeed/flutter_freshchat
-I forked initially but decided to make the project fresh following https://flutter.dev/docs/development/packages-and-plugins/developing-packages
-and using version 1.5 of flutter.
+I forked initially but our project needs to target lower versions of Android. This version has camera
+capture disabled which fits our needs. 
+
+Our IOS implementation was done in objective c instead of swift.
+
+A Flutter plugin for integrating Freshchat in your mobile app.
 
 ## Usage
 
