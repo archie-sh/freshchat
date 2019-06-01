@@ -1,8 +1,8 @@
 name: freshchat
 description: A new flutter plugin project.
 version: 0.0.1
-author:
-homepage:
+author: "archie-sh <archibald.sheran@previondo.eu>"
+homepage: https://github.com/archie-sh/freshchat
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
