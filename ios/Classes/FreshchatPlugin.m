@@ -54,7 +54,11 @@ static const NSString* METHOD_SETUP_PUSH_NOTIFICATIONS = @"setupPushNotification
       NSString* firstName = call.arguments[@"firstName"];
       NSString* email = call.arguments[@"email"];
       FreshchatUser* freshchatUser = [FreshchatUser sharedInstance];
-      freshchatUser.firstName = firstName;
+      
+      if (firstName != nil && [firstName length] > 0) {
+          freshchatUser.firstName = firstName;
+      }
+      
       freshchatUser.email = email;
       
       [[Freshchat sharedInstance] setUser:freshchatUser];
