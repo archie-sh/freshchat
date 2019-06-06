@@ -9,7 +9,7 @@
 		<key>ChatBubbleRight</key>
 		<string>FCResources.bundle/Images/freshchat_chat_bubble_right</string>
 		<key>ChatBubbleLeft</key>
-		<string>freshchat_chat_bubble_left_white.png</string>
+		<string>FCResources.bundle/Images/freshchat_chat_bubble_left</string>
 		<key>CancelIcon</key>
 		<string>FCResources.bundle/Images/freshchat_cancel_icon</string>
 		<key>TeamMemberAvatarIcon</key>
@@ -26,22 +26,22 @@
 		<key>TeamMemberNameTextStyle</key>
 		<dict>
 			<key>fontName</key>
-			<string>Asap-Medium</string>
+			<string>SYS_DEFAULT_FONT_NAME</string>
 			<key>textSize</key>
 			<string>13.0f</string>
 			<key>textColor</key>
-			<string>#93A8B3</string>
+			<string>#000000</string>
 		</dict>
 		<key>TeamMemberMessageTextStyle</key>
 		<dict>
 			<key>textColorLink</key>
 			<string>#2283F6</string>
 			<key>fontName</key>
-			<string>Asap</string>
+			<string>Arial</string>
 			<key>textSize</key>
-			<string>14.0f</string>
+			<string>15.0f</string>
 			<key>textColor</key>
-			<string>#3C4458</string>
+			<string>#000000</string>
 			<key>textAlignment</key>
 			<string></string>
 		</dict>
@@ -100,7 +100,7 @@
 			<key>textColor</key>
 			<string>#000000</string>
 			<key>textColorHint</key>
-			<string>#93A8B3</string>
+			<string>#D3D3D3</string>
 			<key>textCursorColor</key>
 			<string>#808285</string>
 			<key>borderColor</key>
@@ -108,14 +108,14 @@
 			<key>background</key>
 			<string>#FFFFFF</string>
 			<key>buttonColor</key>
-			<string>#ff0000</string>
+			<string>#000000</string>
 		</dict>
 		<key>MessageReplyViewStyle</key>
 		<dict>
 			<key>background</key>
-			<string>#F2F4F8</string>
+			<string>#FFFFFF</string>
 			<key>dividerColor</key>
-			<string>#F2F4F8</string>
+			<string>#B3B3B3</string>
 		</dict>
 		<key>FallbackMessageStyle</key>
 		<dict>
@@ -255,7 +255,7 @@
 		<key>MessageListStyle</key>
 		<dict>
 			<key>background</key>
-			<string>#F2F4F8</string>
+			<string>FCResources.bundle/Images/freshchat_conv_bg</string>
 		</dict>
 		<key>ChatBubbleInsets</key>
 		<dict>
@@ -376,7 +376,7 @@
 			<key>textSize</key>
 			<string>17.0f</string>
 			<key>textColor</key>
-			<string>#3C4458</string>
+			<string>#000000</string>
 		</dict>
 		<key>ActionButtonStyle</key>
 		<dict>
@@ -385,7 +385,7 @@
 			<key>textSize</key>
 			<string>16.0f</string>
 			<key>textColor</key>
-			<string>#00A8FF</string>
+			<string>#0079FF</string>
 		</dict>
 		<key>NavigationBarStyle</key>
 		<dict>
@@ -397,7 +397,7 @@
 			<key>fontName</key>
 			<string>SYS_DEFAULT_FONT_NAME</string>
 			<key>textColor</key>
-			<string>#848A98</string>
+			<string>#6D6D6D</string>
 		</dict>
 	</dict>
 	<key>FAQDetail</key>
@@ -609,7 +609,7 @@
 		<key>FAQCategoryListStyle</key>
 		<dict>
 			<key>background</key>
-			<string>#FF0000</string>
+			<string>#FFFFFF</string>
 		</dict>
 		<key>FAQCategoryAltIconStyle</key>
 		<dict>

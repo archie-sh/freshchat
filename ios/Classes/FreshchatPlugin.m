@@ -16,8 +16,15 @@ static const NSString* METHOD_SETUP_PUSH_NOTIFICATIONS = @"setupPushNotification
   FlutterMethodChannel* channel = [FlutterMethodChannel
       methodChannelWithName:@"freshchat"
             binaryMessenger:[registrar messenger]];
-  FreshchatPlugin* instance = [[FreshchatPlugin alloc] init];
+  FreshchatPlugin* instance = [[FreshchatPlugin alloc] initWithRegistrar:registrar];
   [registrar addMethodCallDelegate:instance channel:channel];
+}
+
+- (instancetype)initWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
+  self = [super init];
+  NSAssert(self, @"super init cannot be nil");
+  _registrar = registrar;
+  return self;
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
@@ -33,6 +40,9 @@ static const NSString* METHOD_SETUP_PUSH_NOTIFICATIONS = @"setupPushNotification
       FreshchatConfig* freshchatConfig = [[FreshchatConfig alloc] initWithAppID:appID andAppKey:appKey];
       
       freshchatConfig.cameraCaptureEnabled = false;
+
+      // NSString* key = [_registrar lookupKeyForAsset:@"FCTheme_New"];
+      // NSString* path = [[NSBundle mainBundle] pathForResource:key ofType:nil];
       freshchatConfig.themeName = @"FCTheme_New";
       
       [[Freshchat sharedInstance] initWithConfig:freshchatConfig];
