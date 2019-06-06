@@ -3,6 +3,10 @@ A copy of https://github.com/fayeed/flutter_freshchat
 I forked initially but our project needs to target lower versions of Android. This version has camera
 capture disabled which fits our needs. 
 
+To use the ios version of the plugin it is necessary to add a FCTheme_New.plist insdie the runner using 
+Xcode. The example app uses the same theme as the official freshchat ios sdk.
+https://github.com/freshdesk/freshchat-ios/blob/master/FreshchatSDK/FCResources.bundle/Themes/FCTheme.plist 
+
 Our IOS implementation was done in objective c instead of swift.
 
 A Flutter plugin for integrating Freshchat in your mobile app.
