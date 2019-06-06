@@ -33,6 +33,7 @@ static const NSString* METHOD_SETUP_PUSH_NOTIFICATIONS = @"setupPushNotification
       FreshchatConfig* freshchatConfig = [[FreshchatConfig alloc] initWithAppID:appID andAppKey:appKey];
       
       freshchatConfig.cameraCaptureEnabled = false;
+      freshchatConfig.themeName = @"FCTheme_New";
       
       [[Freshchat sharedInstance] initWithConfig:freshchatConfig];
       
