@@ -4,8 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
 
 class Freshchat {
-  static const MethodChannel _channel =
-  const MethodChannel('freshchat');
+  static const MethodChannel _channel = const MethodChannel('freshchat');
 
   static Future<bool> init(
       {@required String appID, @required String appKey}) async {
@@ -51,15 +50,15 @@ class Freshchat {
       "title": title
     };
     final bool result =
-    await _channel.invokeMethod('showConversations', params);
+        await _channel.invokeMethod('showConversations', params);
     return result;
   }
 
   static Future<bool> showFAQs(
       {bool showFaqCategoriesAsGrid = true,
-        bool showContactUsOnAppBar = true,
-        bool showContactUsOnFaqScreens = false,
-        bool showContactUsOnFaqNotHelpful = false}) async {
+      bool showContactUsOnAppBar = true,
+      bool showContactUsOnFaqScreens = false,
+      bool showContactUsOnFaqNotHelpful = false}) async {
     final Map<String, dynamic> params = <String, dynamic>{
       "showFaqCategoriesAsGrid": showFaqCategoriesAsGrid,
       "showContactUsOnAppBar": showContactUsOnAppBar,
@@ -79,7 +78,7 @@ class Freshchat {
   static Future<bool> setupPushNotifications({@required String token}) async {
     final Map<String, dynamic> params = <String, dynamic>{token: token};
     final bool result =
-    await _channel.invokeMethod('setupPushNotifications', params);
+        await _channel.invokeMethod('setupPushNotifications', params);
     return result;
   }
 }
