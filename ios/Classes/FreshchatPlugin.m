@@ -41,6 +41,7 @@ static const NSString* METHOD_SETUP_PUSH_NOTIFICATIONS = @"setupPushNotification
       
       freshchatConfig.cameraCaptureEnabled = false;
       freshchatConfig.responseExpectationVisible = NO; //set NO to hide it if you want to hide the response expectation for the channel
+      freshchatConfig.stringsBundle = @"CustomBundle";
 
       // NSString* key = [_registrar lookupKeyForAsset:@"FCTheme_New"];
       // NSString* path = [[NSBundle mainBundle] pathForResource:key ofType:nil];
