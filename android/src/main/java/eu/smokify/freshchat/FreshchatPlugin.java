@@ -12,6 +12,7 @@ import com.freshchat.consumer.sdk.UnreadCountCallback;
 import com.freshchat.consumer.sdk.exception.MethodNotAllowedException;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
@@ -74,11 +75,19 @@ public class FreshchatPlugin implements MethodCallHandler {
       case METHOD_UPDATE_USER_INFO:
         final String firstName = call.argument("firstName");
         final String email = call.argument("email");
+        final Map<String, String> customProperties = call.argument("custom_property_list");
+
         FreshchatUser freshchatUser = Freshchat.getInstance(this.application.getApplicationContext()).getUser();
-        freshchatUser.setFirstName(firstName);
+        if (firstName != null) {
+            freshchatUser.setFirstName(firstName);
+        }
         freshchatUser.setEmail(email);
         try {
           Freshchat.getInstance(this.application.getApplicationContext()).setUser(freshchatUser);
+
+          if (customProperties != null) {
+            Freshchat.getInstance(this.application.getApplicationContext()).setUserProperties(customProperties);
+          }
         } catch (MethodNotAllowedException e) {
           e.printStackTrace();
           result.error("Error while setting User", "error", e);

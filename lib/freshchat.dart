@@ -16,11 +16,14 @@ class Freshchat {
     return result;
   }
 
-  static Future<bool> updateUserInfo(
-      {@required String firstName, @required String email}) async {
+  static Future<bool> updateUserInfo({
+    @required String email,
+    String firstName,
+    Map<String, String> customProperties}) async {
     final Map<String, dynamic> params = <String, dynamic>{
       'firstName': firstName,
       'email': email,
+      'custom_property_list': customProperties,
     };
 
     final bool result = await _channel.invokeMethod('updateUserInfo', params);
