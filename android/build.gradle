@@ -36,4 +36,5 @@ android {
 
 dependencies {
     implementation 'com.github.freshdesk:freshchat-android:2.9.0'
+    implementation 'uk.co.chrisjenx:calligraphy:2.1.0'
 }
