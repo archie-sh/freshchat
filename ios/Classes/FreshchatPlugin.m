@@ -40,7 +40,9 @@ static const NSString* METHOD_SETUP_PUSH_NOTIFICATIONS = @"setupPushNotification
       FreshchatConfig* freshchatConfig = [[FreshchatConfig alloc] initWithAppID:appID andAppKey:appKey];
       
       freshchatConfig.cameraCaptureEnabled = false;
-      freshchatConfig.responseExpectationVisible = NO; //set NO to hide it if you want to hide the response expectation for the channel
+      freshchatConfig.responseExpectationVisible = NO;
+      freshchatConfig.teamMemberInfoVisible = NO;
+      //set NO to hide it if you want to hide the response expectation for the channel
       freshchatConfig.stringsBundle = @"CustomBundle";
 
       // NSString* key = [_registrar lookupKeyForAsset:@"FCTheme_New"];
@@ -66,9 +68,11 @@ static const NSString* METHOD_SETUP_PUSH_NOTIFICATIONS = @"setupPushNotification
   else if ([METHOD_UPDATE_USER_INFO isEqualToString:call.method]) {
       NSString* email = call.arguments[@"email"];
       FreshchatUser* freshchatUser = [FreshchatUser sharedInstance];
-      
+      freshchatUser.email = email;
+
       if (call.arguments[@"firstName"] != [NSNull null]) {
-          freshchatUser.firstName = call.arguments[@"firstName"];
+          NSString* firstName = call.arguments[@"firstName"];
+          freshchatUser.firstName = firstName;
       }
       
       if (call.arguments[@"custom_property_list"] != [NSNull null]) {
@@ -76,10 +80,8 @@ static const NSString* METHOD_SETUP_PUSH_NOTIFICATIONS = @"setupPushNotification
         [[Freshchat sharedInstance] setUserProperties:customProperties];
       }
       
-      freshchatUser.email = email;
-      
       [[Freshchat sharedInstance] setUser:freshchatUser];
-      
+
       result([NSNumber numberWithBool:YES]);
   }
   else if ([METHOD_IDENTIFY_USER isEqualToString:call.method]) {

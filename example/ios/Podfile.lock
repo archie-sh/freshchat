@@ -3,7 +3,7 @@ PODS:
   - freshchat (0.0.1):
     - Flutter
     - FreshchatSDK
-  - FreshchatSDK (2.5.1)
+  - FreshchatSDK (2.8.0)
   - path_provider (0.0.1):
     - Flutter
 
@@ -27,7 +27,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   freshchat: f7c91315e1cc77595883e1c542f6382fc803738d
-  FreshchatSDK: ded74133feff02722215f5f382bb04a87c53c766
+  FreshchatSDK: aa24eb196835221602aa8af645a1cb8e2b50a9e7
   path_provider: f96fff6166a8867510d2c25fdcc346327cc4b259
 
 PODFILE CHECKSUM: 3748a4c4f0ee594789784ad08d07684f97c89f81
