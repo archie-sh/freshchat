@@ -72,9 +72,9 @@ static const NSString* METHOD_SETUP_PUSH_NOTIFICATIONS = @"setupPushNotification
           freshchatUser.firstName = firstName;
       }
       
-      NSDictionary *customProperties = call.arguments[@"customProperties"];
-      if(customProperties != nil) {
-          [[Freshchat sharedInstance] setUserProperties:customProperties];
+      if (call.arguments[@"custom_property_list"] != [NSNull null]) {
+        NSDictionary *customProperties = call.arguments[@"custom_property_list"];
+        [[Freshchat sharedInstance] setUserProperties:customProperties];
       }
       
       freshchatUser.email = email;

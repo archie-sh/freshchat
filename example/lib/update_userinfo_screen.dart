@@ -68,6 +68,9 @@ class UpdateUserInfoState extends State<UpdateUserInfoScreen> {
                     await storage.setItem('uid', this._email);
 
                     await Freshchat.updateUserInfo(
+                        firstName: this._fullName, email: this._email);
+
+                    await Freshchat.updateUserInfo(
                         firstName: this._fullName,
                         email: this._email,
                         customProperties: {'test': '123'});
