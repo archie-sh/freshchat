@@ -1,6 +1,6 @@
 name: freshchat
 description: Copy of https://pub.dev/packages/flutter_freshchat that supports ios theming and older versions of android (Camera capture is disabled).
-version: 0.1.0
+version: 0.1.1
 author: "archie-sh <archibald.sheran@previondo.eu>"
 homepage: https://github.com/archie-sh/freshchat
 
