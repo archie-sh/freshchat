@@ -33,6 +33,7 @@ class UpdateUserInfoState extends State<UpdateUserInfoScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               TextFormField(
+                initialValue: 'Archie',
                 decoration: InputDecoration(
                     hintText: 'xyz', labelText: 'Enter Fullname'),
                 onSaved: (value) {
@@ -45,6 +46,7 @@ class UpdateUserInfoState extends State<UpdateUserInfoScreen> {
                 },
               ),
               TextFormField(
+                initialValue: 'a@a.com',
                 decoration: InputDecoration(
                     hintText: 'xyz@test.com',
                     labelText: 'Eenter Email address'),
@@ -66,7 +68,9 @@ class UpdateUserInfoState extends State<UpdateUserInfoScreen> {
                     await storage.setItem('uid', this._email);
 
                     await Freshchat.updateUserInfo(
-                        firstName: this._fullName, email: this._email);
+                        firstName: this._fullName,
+                        email: this._email,
+                        customProperties: {'test': '123'});
 
                     scaffoldKey.currentState
                         .showSnackBar(SnackBar(content: Text("Clicked")));
