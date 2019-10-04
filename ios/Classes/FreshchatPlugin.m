@@ -64,12 +64,11 @@ static const NSString* METHOD_SETUP_PUSH_NOTIFICATIONS = @"setupPushNotification
       result([NSNumber numberWithBool:YES]);
   }
   else if ([METHOD_UPDATE_USER_INFO isEqualToString:call.method]) {
-      NSString* firstName = call.arguments[@"firstName"];
       NSString* email = call.arguments[@"email"];
       FreshchatUser* freshchatUser = [FreshchatUser sharedInstance];
       
-      if (firstName != nil && [firstName length] > 0) {
-          freshchatUser.firstName = firstName;
+      if (call.arguments[@"firstName"] != [NSNull null]) {
+          freshchatUser.firstName = call.arguments[@"firstName"];
       }
       
       if (call.arguments[@"custom_property_list"] != [NSNull null]) {
