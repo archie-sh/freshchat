@@ -51,6 +51,7 @@ public class FreshchatPlugin implements MethodCallHandler {
         final String appID = call.argument("appID");
         final String appKey = call.argument("appKey");
         FreshchatConfig freshchatConfig = new FreshchatConfig(appID, appKey);
+        freshchatConfig.setTeamMemberInfoVisible(false);
         freshchatConfig.setCameraCaptureEnabled(false);
         Freshchat.getInstance(this.application.getApplicationContext()).init(freshchatConfig);
         result.success(true);
